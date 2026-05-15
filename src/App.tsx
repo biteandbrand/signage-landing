@@ -119,13 +119,13 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <a
-            href="https://signagepanel.app/login"
+            href="https://app.signagepanel.app"
             className="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-crimson-700 transition-colors"
           >
             Sign In
           </a>
           <a
-            href="https://signagepanel.app/register"
+            href="https://app.signagepanel.app"
             className="inline-flex items-center gap-1.5 bg-crimson-700 hover:bg-crimson-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
           >
             Get Started
@@ -157,10 +157,10 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
             </a>
           ))}
           <div className="pt-3 flex flex-col gap-2">
-            <a href="https://signagepanel.app/login" className="text-sm font-medium text-center text-neutral-700 dark:text-neutral-300 py-2.5 border border-neutral-200 dark:border-neutral-700 rounded-lg">
+            <a href="https://app.signagepanel.app" className="text-sm font-medium text-center text-neutral-700 dark:text-neutral-300 py-2.5 border border-neutral-200 dark:border-neutral-700 rounded-lg">
               Sign In
             </a>
-            <a href="https://signagepanel.app/register" className="text-sm font-semibold text-center bg-crimson-700 hover:bg-crimson-800 text-white py-2.5 rounded-lg transition-colors">
+            <a href="https://app.signagepanel.app" className="text-sm font-semibold text-center bg-crimson-700 hover:bg-crimson-800 text-white py-2.5 rounded-lg transition-colors">
               Get Started
             </a>
           </div>
@@ -377,11 +377,6 @@ function HowItWorks() {
 function Features() {
   const secondary = [
     {
-      icon: Calendar,
-      title: 'Playlist scheduling',
-      description: 'Set start and end times for any playlist. Show breakfast menus in the morning, switch to lunch automatically.',
-    },
-    {
       icon: Zap,
       title: 'Real-time screen control',
       description: 'Push changes to any screen instantly. No waiting, no manual updates — it just works.',
@@ -488,7 +483,7 @@ function Pricing() {
     'Multi-location dashboard',
     'Real-time screen control',
     'QR code screen pairing',
-    'Scheduling & automation',
+    'Automation',
     '24/7 technical support',
     'Works on Android TV & Fire Stick',
   ];
