@@ -241,7 +241,7 @@ function Hero() {
               <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
               <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
               <div className="ml-3 flex-1 max-w-xs bg-neutral-700 rounded-md px-3 py-1 text-xs text-neutral-400">
-                signagepanel.app/dashboard
+                app.signagepanel.app/
               </div>
             </div>
 
