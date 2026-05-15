@@ -199,7 +199,7 @@ function Hero() {
           <AnimateIn delay={240}>
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <a
-                href="https://signagepanel.app/register"
+                href="https://app.signagepanel.app"
                 className="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-800 text-white font-semibold px-6 py-3.5 rounded-lg transition-colors text-sm"
               >
                 Get Started
@@ -583,7 +583,7 @@ function Pricing() {
               </ul>
 
               <a
-                href="https://signagepanel.app/register"
+                href="https://app.signagepanel.app"
                 className="block text-center bg-crimson-700 hover:bg-crimson-600 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm"
               >
                 Get Started
@@ -789,7 +789,7 @@ function ContactCTA() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://signagepanel.app/register"
+                href="https://app.signagepanel.app"
                 className="inline-flex items-center justify-center gap-2 bg-crimson-700 hover:bg-crimson-600 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors text-sm"
               >
                 Get Started
