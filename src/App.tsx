@@ -570,7 +570,7 @@ function Pricing() {
               <div className="mb-6">
                 <div className="flex items-end gap-1.5">
                   <span className="text-4xl font-extrabold text-white">
-                    {annual ? '£50' : '£5'}
+                    {annual ? '£70' : '£7'}
                   </span>
                   <span className="text-neutral-400 text-sm mb-1.5">
                     / screen / {annual ? 'year' : 'month'}
@@ -580,7 +580,7 @@ function Pricing() {
                   <p className="text-xs text-green-400 mt-1 font-medium">Best value — save 17% vs monthly</p>
                 )}
                 {!annual && (
-                  <p className="text-xs text-neutral-500 mt-1">or £50/screen/year (save 17%)</p>
+                  <p className="text-xs text-neutral-500 mt-1">or £70/screen/year (save 17%)</p>
                 )}
               </div>
 
