@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/login",
+      "destination": "https://app.signagepanel.app",
+      "permanent": true
+    },
+    {
+      "source": "/dashboard",
+      "destination": "https://app.signagepanel.app",
+      "permanent": true
+    },
+    {
+      "source": "/activate",
+      "destination": "https://app.signagepanel.app/activate",
+      "permanent": true
+    }
+  ]
+}
