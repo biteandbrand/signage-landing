@@ -43,13 +43,13 @@ function useScrollAnimation() {
   return ref;
 }
 
-function AnimateIn({ children, delay = 0, className = '' }: { children: ReactNode; delay?: number; className?: string }) {
+function AnimateIn({ children, delay = 0, className = '', style }: { children: ReactNode; delay?: number; className?: string; style?: React.CSSProperties }) {
   const ref = useScrollAnimation();
   return (
     <div
       ref={ref}
       className={`animate-on-scroll ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `${delay}ms`, ...style }}
     >
       {children}
     </div>
@@ -262,7 +262,7 @@ function Hero() {
               </div>
 
               <div className="grid grid-cols-3 gap-3 mb-6">
-                {['Screens Online', 'Playlists', 'Locations'].map((label, i) => (
+                {['Screens Online', 'Playlists', 'Locations'].map((_, i) => (
                   <div key={i} className="bg-neutral-800/60 rounded-xl p-4">
                     <div className="h-7 w-12 bg-neutral-700 rounded mb-2"></div>
                     <div className="h-3 w-20 bg-neutral-700/60 rounded"></div>
@@ -649,22 +649,16 @@ function Pricing() {
 function Testimonials() {
   const items = [
     {
-      name: 'Sarah Mitchell',
-      role: 'Owner, The Corner Café — Bristol',
-      body: "We've replaced three printed menu boards with digital screens and haven't looked back. Updating prices or adding daily specials takes less than a minute now.",
-      initials: 'SM',
+      name: 'Delight Kebab',
+      role: 'Bitterne, Southampton',
+      body: "SignagePanel handled everything for us — not just the screens, but the full menu content too. They created our menu images and videos, and even designed our logo as part of the managed service. Our digital menu now looks professional on every screen, and updating prices takes minutes, not a reprint.",
+      initials: 'DK',
     },
     {
-      name: 'James Thornton',
-      role: "Operations Manager, Thornton's Bakery — Manchester",
-      body: 'Managing screens across five locations used to be a nightmare. With SignagePanel I do it from my phone while having my morning coffee.',
-      initials: 'JT',
-    },
-    {
-      name: 'Priya Patel',
-      role: 'Director, Spice Route Restaurants — London',
-      body: "The QR code setup was surprisingly easy. Our staff can activate a new screen without calling IT. It just works, which is all I needed.",
-      initials: 'PP',
+      name: 'The Flame',
+      role: 'Southampton',
+      body: "The SignagePanel team prepared all of our menu content — images and videos included — and pushed it straight to our displays. We simply told them what we wanted and they took care of the rest. That's exactly the done-for-you approach our business needed.",
+      initials: 'TF',
     },
   ];
 
@@ -680,7 +674,7 @@ function Testimonials() {
           </h2>
         </AnimateIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {items.map((t, i) => (
             <AnimateIn key={i} delay={i * 120}>
               <div className="rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 p-6 shadow-card dark:shadow-card-dark h-full flex flex-col">
@@ -733,7 +727,7 @@ function FAQ() {
     },
     {
       q: 'Is there a free trial?',
-      a: "We don't currently offer a free trial. You can sign up for the Software Plan and start managing your screens straight away with a monthly or annual subscription.",
+      a: 'Yes. Every new account comes with a 14-day free trial. Upload content, create playlists and pair your first screen — no payment details required until the trial ends.',
     },
     {
       q: 'Is the Managed Service available outside the UK?',
@@ -857,7 +851,7 @@ function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-neutral-800">
-          <p className="text-xs text-neutral-600">© 2025 SignagePanel. All rights reserved.</p>
+          <p className="text-xs text-neutral-600">© 2026 SignagePanel. All rights reserved.</p>
         </div>
       </div>
     </footer>
