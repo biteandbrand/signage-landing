@@ -650,13 +650,13 @@ function Testimonials() {
   const items = [
     {
       name: 'Delight Kebab',
-      role: 'Bitterne, Southampton',
+      role: 'Oxford',
       body: "SignagePanel handled everything for us — not just the screens, but the full menu content too. They created our menu images and videos, and even designed our logo as part of the managed service. Our digital menu now looks professional on every screen, and updating prices takes minutes, not a reprint.",
       initials: 'DK',
     },
     {
       name: 'The Flame',
-      role: 'Southampton',
+      role: 'Cheltenham',
       body: "The SignagePanel team prepared all of our menu content — images and videos included — and pushed it straight to our displays. We simply told them what we wanted and they took care of the rest. That's exactly the done-for-you approach our business needed.",
       initials: 'TF',
     },
