@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SignagePanel for Funeral Directors — Digital Book of Remembrance</title>
+<style>
+  /* ---------- print / page setup ---------- */
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; min-height: 100%; background: #E7E2D7; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2B2B2B;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm; height: 297mm;
+    margin: 0 auto;
+    padding: 12mm 14mm;
+    display: flex; flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: #F7F4EE;
+  }
+
+  /* on screen, keep the sheet centered; on paper, remove the backdrop */
+  @media screen {
+    .page { box-shadow: 0 2mm 8mm rgba(0,0,0,.18); margin-top: 6mm; margin-bottom: 6mm; }
+  }
+
+  /* subtle top border ornament */
+  .page::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4mm; background: #8A6D3B;
+  }
+  .page::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 4mm; background: #8A6D3B;
+  }
+
+  /* ---------- header ---------- */
+  .brand {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid #C9BCA4;
+    padding-bottom: 4mm;
+  }
+  .brand-left { font-size: 11pt; letter-spacing: 3px; text-transform: uppercase; color: #2B2B2B; font-weight: 700; }
+  .brand-left span { color: #8A6D3B; }
+  .brand-right { font-size: 9pt; letter-spacing: 1.5px; text-transform: uppercase; color: #6E6455; }
+
+  .hero { text-align: center; padding: 14mm 0 8mm; }
+  .eyebrow { font-size: 9pt; letter-spacing: 2.5px; text-transform: uppercase; color: #8A6D3B; margin-bottom: 4mm; }
+  h1 {
+    font-size: 30pt; font-weight: 400; line-height: 1.12; color: #1F1F1F;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  h1 em { font-style: italic; color: #8A6D3B; }
+  .sub { margin-top: 5mm; font-size: 12.5pt; line-height: 1.55; color: #4A443A; max-width: 150mm; margin-left: auto; margin-right: auto; }
+
+  /* ---------- feature cards ---------- */
+  .cards {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5mm; margin-top: 9mm;
+  }
+  .card {
+    border: 1px solid #D8CDB6; background: #FCFAF5; padding: 6mm 5mm;
+    text-align: center;
+  }
+  .card-icon { margin-bottom: 3.5mm; }
+  .card h3 { font-size: 13pt; font-weight: 700; color: #1F1F1F; margin-bottom: 2mm; }
+  .card p { font-size: 9.5pt; line-height: 1.5; color: #5A5243; }
+
+  /* ---------- how it works ---------- */
+  .how { margin-top: 9mm; background: #2B2B2B; color: #F7F4EE; padding: 6mm 8mm; }
+  .how h2 { font-size: 13pt; letter-spacing: 2px; text-transform: uppercase; color: #D9C391; margin-bottom: 4mm; font-weight: 400; text-align: center; }
+  .how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; text-align: center; }
+  .step .num { font-size: 15pt; color: #D9C391; font-weight: 700; }
+  .step p { font-size: 9.5pt; line-height: 1.45; color: #E6DFD2; margin-top: 1.5mm; }
+
+  /* ---------- pricing ---------- */
+  .price {
+    margin-top: 8mm; text-align: center;
+    border-top: 1px solid #C9BCA4; padding-top: 6mm;
+  }
+  .price .line1 { font-size: 13pt; color: #1F1F1F; }
+  .price .line1 b { color: #8A6D3B; }
+  .price .line2 { margin-top: 2mm; font-size: 10pt; color: #6E6455; }
+
+  /* ---------- footer / cta ---------- */
+  .cta {
+    margin-top: auto; text-align: center;
+    background: #1F1F1F; color: #F7F4EE; padding: 6mm;
+  }
+  .cta .tag { font-size: 10.5pt; letter-spacing: 2px; text-transform: uppercase; color: #D9C391; }
+  .cta .url { font-size: 15pt; color: #FFFFFF; margin-top: 1.5mm; font-family: Georgia, serif; letter-spacing: 1px; }
+  .cta .contact { font-size: 9.5pt; color: #B9AE97; margin-top: 2mm; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brand">
+    <div class="brand-left">Signage<span>Panel</span></div>
+    <div class="brand-right">for Funeral Directors</div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">A lasting tribute for every family</div>
+    <h1>Give families a <em>Book of Remembrance</em><br>they will never forget.</h1>
+    <p class="sub">
+      A dignified digital screen that honours a life with photographs, music and
+      tributes — easy to set up, beautifully presented, and managed entirely by us.
+    </p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">
+        <!-- candle / flame -->
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#8A6D3B" stroke-width="1.4">
+          <path d="M12 2c1.5 2 3 4 3 6a3 3 0 0 1-6 0c0-2 1.5-4 3-6z"/>
+          <rect x="9" y="12" width="6" height="8" rx="1" fill="#8A6D3B" stroke="none"/>
+          <path d="M7 22h10" stroke="#8A6D3B" stroke-width="1.2"/>
+        </svg>
+      </div>
+      <h3>Book of Remembrance</h3>
+      <p>A graceful photo-and-music tribute displayed on a calm, tasteful screen in your chapel or waiting area.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <!-- service board / frame -->
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#8A6D3B" stroke-width="1.4">
+          <rect x="4" y="5" width="16" height="14" rx="1.5"/>
+          <path d="M8 9h8M8 12h5"/>
+          <circle cx="16" cy="15" r="2.5" fill="#8A6D3B" stroke="none"/>
+        </svg>
+      </div>
+      <h3>Service Boards</h3>
+      <p>Daily orders of service, room directions and schedules shown clearly — so families always know where to be.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <!-- tribute gallery / photo frames -->
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#8A6D3B" stroke-width="1.4">
+          <rect x="3" y="4" width="7" height="7" rx="1"/>
+          <rect x="14" y="4" width="7" height="7" rx="1"/>
+          <rect x="3" y="15" width="7" height="7" rx="1"/>
+          <rect x="14" y="15" width="7" height="7" rx="1"/>
+          <path d="M6.5 9V6.5M4 7.5h5" stroke="#8A6D3B" stroke-width="1"/>
+        </svg>
+      </div>
+      <h3>Tribute Gallery</h3>
+      <p>A rolling gallery of photographs and messages families can add to — from anywhere, at any time.</p>
+    </div>
+  </div>
+
+  <div class="how">
+    <h2>Set up in minutes — with no disruption to your day</h2>
+    <div class="how-steps">
+      <div class="step">
+        <div class="num">1</div>
+        <p>We send you a small plug-in screen (Amazon Fire Stick).</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <p>Scan the QR code — your screens come to life in under a minute.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <p>We manage content, updates and support entirely remotely.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="price">
+    <div class="line1">One-time setup of <b>&pound;199</b> &nbsp;·&nbsp; then <b>&pound;240</b> per screen, per year</div>
+    <div class="line2">Includes the tribute software, family upload portal and full remote support &mdash; no staff time required.</div>
+  </div>
+
+  <div class="cta">
+    <div class="tag">See a sample tribute &middot; arrange a call</div>
+    <div class="url">signagepanel.app/funeral</div>
+    <div class="contact">okan@biteandbrand.co.uk &middot; UK-wide</div>
+  </div>
+
+</div>
+</body>
+</html>

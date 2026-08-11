@@ -14,6 +14,11 @@
       "source": "/activate",
       "destination": "https://app.signagepanel.app/activate",
       "permanent": true
+    },
+    {
+      "source": "/funeral",
+      "destination": "/funeral.html",
+      "permanent": false
     }
   ]
 }
