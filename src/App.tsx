@@ -84,6 +84,7 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
     { label: 'Pricing', href: '#pricing' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Contact', href: '#contact' },
+    { label: 'For Funeral Directors', href: '/funeral' },
   ];
 
   return (
@@ -776,6 +777,35 @@ function FAQ() {
   );
 }
 
+// ─── Funeral Directors ────────────────────────────────────────────────────────
+function FuneralCTA() {
+  return (
+    <section className="py-20 bg-[#E7E2D7] dark:bg-neutral-900">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <AnimateIn>
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#8A6D3B] mb-3 block">
+            For Funeral Directors
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-4">
+            Give every family a lasting Book of Remembrance
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+            A dignified digital screen for your chapel or waiting area — photographs, music and tributes,
+            set up in minutes and managed entirely by us.
+          </p>
+          <a
+            href="/funeral"
+            className="inline-flex items-center justify-center gap-2 bg-[#2B2B2B] hover:bg-neutral-800 text-[#F7F4EE] font-semibold px-6 py-3.5 rounded-lg transition-colors text-sm"
+          >
+            Explore the Funeral Service
+            <ArrowRight size={16} />
+          </a>
+        </AnimateIn>
+      </div>
+    </section>
+  );
+}
+
 // ─── Contact / CTA Banner ─────────────────────────────────────────────────────
 function ContactCTA() {
   return (
@@ -837,6 +867,7 @@ function Footer() {
             {[
               { label: 'Privacy Policy', href: 'https://signagepanel.app/privacy' },
               { label: 'Fire Stick Setup', href: '/setup.html' },
+              { label: 'For Funeral Directors', href: '/funeral' },
               { label: 'Contact', href: 'https://wa.me/447311799407' },
             ].map((l) => (
               <a
@@ -881,6 +912,7 @@ export default function App() {
         <Pricing />
         <Testimonials />
         <FAQ />
+        <FuneralCTA />
         <ContactCTA />
       </main>
       <Footer />
