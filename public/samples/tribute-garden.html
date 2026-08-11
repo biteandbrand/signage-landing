@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celebrating Peggy Halloway | SignagePanel Sample</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #2B2B2B; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2B2B2B;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .screen {
+    position: relative;
+    width: 1280px; height: 720px;
+    max-width: 100vw; max-height: 100vh;
+    background: #F4EFE2;
+    display: grid; grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    box-shadow: 0 4px 40px rgba(0,0,0,.45);
+  }
+
+  .left { position: relative; overflow: hidden; }
+  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 2.2s ease-in-out; }
+  .slide.active { opacity: 1; }
+  .slide svg { width: 100%; height: 100%; display: block; }
+
+  .right {
+    padding: 48px 52px;
+    display: flex; flex-direction: column; justify-content: center;
+    background: #F7F4EE;
+  }
+  .eyebrow { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: #6E9B7B; margin-bottom: 14px; }
+  .name { font-size: 46px; font-weight: 400; line-height: 1.05; color: #1F1F1F; }
+  .years { font-size: 18px; color: #6E9B7B; font-style: italic; margin: 10px 0 22px; }
+  .words { font-size: 19px; line-height: 1.7; color: #4A443A; border-left: 3px solid #6E9B7B; padding-left: 18px; }
+  .words em { color: #6E9B7B; }
+  .message {
+    margin-top: 26px; font-size: 15px; line-height: 1.6; color: #6E6455;
+    background: #F1EADB; border: 1px solid #D8CDB6; border-radius: 10px; padding: 14px 18px;
+  }
+  .message b { color: #1F1F1F; }
+  .music {
+    display: flex; align-items: center; gap: 10px; color: #6E9B7B;
+    font-style: italic; font-size: 14px; margin-top: 22px;
+  }
+  .music .note { animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  .brand { margin-top: auto; text-align: center; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #B9AE97; }
+  .demo-tag {
+    position: absolute; top: 14px; left: 14px; z-index: 5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+    color: #F7F4EE; background: #6E9B7B; padding: 5px 10px; border-radius: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="demo-tag">Demo</div>
+
+  <div class="left">
+    <!-- photo 1: garden roses -->
+    <div class="slide active">
+      <svg viewBox="0 0 640 720" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F4EFE2"/><stop offset="1" stop-color="#DFE4CF"/>
+        </linearGradient></defs>
+        <rect width="640" height="720" fill="url(#r1)"/>
+        <g fill="#A8B49A">
+          <circle cx="320" cy="210" r="130"/><circle cx="220" cy="300" r="90"/><circle cx="430" cy="280" r="100"/>
+        </g>
+        <g fill="#6E9B7B">
+          <circle cx="290" cy="180" r="40"/><circle cx="360" cy="230" r="32"/>
+          <circle cx="250" cy="260" r="28"/><circle cx="430" cy="240" r="26"/>
+        </g>
+        <path d="M0 620c160-70 480-70 640 0v100H0Z" fill="#B9A97F" opacity=".55"/>
+      </svg>
+    </div>
+    <!-- photo 2: seaside -->
+    <div class="slide">
+      <svg viewBox="0 0 640 720" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="r2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#E8E2CE"/><stop offset="1" stop-color="#CFE0DD"/>
+        </linearGradient></defs>
+        <rect width="640" height="720" fill="url(#r2)"/>
+        <rect y="520" width="640" height="200" fill="#B8CFC9"/>
+        <path d="M0 520c120-40 220-40 340 0s220 40 300 0" fill="none" stroke="#DDE8E5" stroke-width="20"/>
+        <circle cx="500" cy="140" r="52" fill="#E8D9A8"/>
+        <g fill="#D8CDB6"><path d="M120 250l14 34-30 12 30 12-14 34 24-26 30 12-24-26 24-26-30 12Z"/></g>
+      </svg>
+    </div>
+    <!-- photo 3: wildflower meadow -->
+    <div class="slide">
+      <svg viewBox="0 0 640 720" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="r3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#E9F0DD"/><stop offset="1" stop-color="#DFE4CF"/>
+        </linearGradient></defs>
+        <rect width="640" height="720" fill="url(#r3)"/>
+        <g stroke="#6E9B7B" stroke-width="4" fill="none">
+          <path d="M100 640v-300M220 640v-260M340 640v-320M460 640v-270M560 640v-290"/>
+        </g>
+        <g fill="#E8D9A8">
+          <circle cx="100" cy="330" r="14"/><circle cx="220" cy="370" r="14"/><circle cx="340" cy="310" r="14"/>
+          <circle cx="460" cy="360" r="14"/><circle cx="560" cy="340" r="14"/>
+        </g>
+        <g fill="#D9A28B">
+          <circle cx="150" cy="400" r="12"/><circle cx="300" cy="380" r="12"/><circle cx="510" cy="410" r="12"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="eyebrow">Celebrating a life</div>
+    <div class="name">Margaret &ldquo;Peggy&rdquo;<br>Halloway</div>
+    <div class="years">1955 &ndash; 2026</div>
+    <p class="words">
+      Peggy found her joy in the garden and her calm by the sea. She grew roses,
+      collected seashells and never missed a family Sunday.
+      <em>Her smile is in every flower.</em>
+    </p>
+    <div class="message">
+      <b>A message from the family:</b> thank you to everyone who shared a memory or a photograph.
+      The tribute wall will remain open until the 14th.
+    </div>
+    <div class="music">
+      <svg class="note" width="18" height="18" viewBox="0 0 24 24" fill="#6E9B7B">
+        <path d="M9 18V5l12-2v13"/>
+        <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+      </svg>
+      <span>Soft piano plays quietly</span>
+    </div>
+    <div class="brand">A Book of Remembrance &middot; SignagePanel</div>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove('active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('active');
+  }, 8000);
+</script>
+</body>
+</html>
