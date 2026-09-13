@@ -22,12 +22,19 @@
   h1 em { color: #c0392b; font-style: normal; }
   .hero-sub { font-size: 16px; color: #888; max-width: 480px; margin: 0 auto 32px; }
 
+  /* Downloader code highlight box */
+  .code-card { max-width: 480px; margin: 0 auto 24px; background: linear-gradient(135deg, #16130f, #1a1512); border: 1px solid #3a2a1a; border-radius: 16px; padding: 28px 24px; text-align: center; }
+  .code-card .code-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ff6b00; margin-bottom: 6px; }
+  .code-card .code-sub { font-size: 13px; color: #888; margin-bottom: 18px; }
+  .code-card .code-num { font-size: 46px; font-weight: 900; letter-spacing: 6px; color: #fff; font-family: monospace; }
+  .code-card .code-hint { font-size: 12px; color: #666; margin-top: 12px; }
+
   .download-card { max-width: 480px; margin: 0 auto 60px; background: #111; border: 1px solid #222; border-radius: 16px; padding: 24px; text-align: center; }
-  .download-icon { font-size: 48px; margin-bottom: 12px; }
-  .download-card h3 { font-size: 18px; margin-bottom: 6px; }
-  .download-card p { font-size: 13px; color: #666; margin-bottom: 20px; }
-  .download-btn { display: inline-flex; align-items: center; gap: 10px; background: #c0392b; color: #fff; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 10px; text-decoration: none; transition: background 0.2s; }
-  .download-btn:hover { background: #a93226; }
+  .download-icon { font-size: 40px; margin-bottom: 12px; }
+  .download-card h3 { font-size: 16px; margin-bottom: 6px; }
+  .download-card p { font-size: 13px; color: #666; margin-bottom: 18px; }
+  .download-btn { display: inline-flex; align-items: center; gap: 10px; background: #333; color: #fff; font-size: 14px; font-weight: 700; padding: 12px 24px; border-radius: 10px; text-decoration: none; transition: background 0.2s; }
+  .download-btn:hover { background: #444; }
   .download-meta { font-size: 11px; color: #555; margin-top: 10px; }
 
   .steps-section { max-width: 640px; margin: 0 auto; padding: 0 24px 80px; }
@@ -40,6 +47,7 @@
   .step-content p { font-size: 14px; color: #888; line-height: 1.6; }
   .step-content .tip { display: inline-flex; align-items: flex-start; gap: 8px; background: #111; border: 1px solid #222; border-radius: 8px; padding: 10px 14px; margin-top: 10px; font-size: 13px; color: #aaa; }
   .step-content code { background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 10px 14px; display: block; margin-top: 10px; font-family: monospace; font-size: 14px; color: #fff; word-break: break-all; user-select: all; cursor: pointer; }
+  .step-content code.bigcode { font-size: 28px; font-weight: 900; letter-spacing: 4px; text-align: center; color: #ff6b00; }
   .step-content code:hover { border-color: #c0392b; }
   .copy-hint { font-size: 11px; color: #555; margin-top: 4px; }
 
@@ -59,6 +67,7 @@
   @media (max-width: 480px) {
     .step { gap: 14px; }
     .step-num { width: 32px; height: 32px; font-size: 12px; }
+    .code-card .code-num { font-size: 38px; letter-spacing: 4px; }
   }
 </style>
 </head>
@@ -75,13 +84,21 @@
   <p class="hero-sub">Follow these simple steps to get your digital signage screen up and running in under 10 minutes.</p>
 </div>
 
-<!-- Download card -->
+<!-- Downloader code highlight -->
+<div class="code-card">
+  <div class="code-label">⬇ Downloader Code</div>
+  <div class="code-sub">The fastest way to install — no long links to type</div>
+  <div class="code-num">2809800</div>
+  <div class="code-hint">Open the Downloader app on your Fire Stick and enter this code</div>
+</div>
+
+<!-- Download card (manual link fallback) -->
 <div class="download-card">
   <div class="download-icon">📦</div>
   <h3>SignagePanel Player</h3>
-  <p>Version 1.3 · Android APK · ~5MB</p>
+  <p>Version 1.5 · Android APK · ~5MB</p>
   <a href="https://pub-dfe4494897fd44f180ebedc0a3dc7786.r2.dev/app-release.apk" class="download-btn" download>
-    ⬇️ Download APK
+    ⬇️ Download APK directly
   </a>
   <div class="download-meta">For Amazon Fire Stick (2nd gen or newer) · Android TV devices</div>
 </div>
@@ -111,10 +128,11 @@
   <div class="step">
     <div class="step-num">3</div>
     <div class="step-content">
-      <h3>Download the SignagePanel APK</h3>
-      <p>Open Downloader and enter this URL in the address bar:</p>
-      <code onclick="copyURL(this)">https://pub-dfe4494897fd44f180ebedc0a3dc7786.r2.dev/app-release.apk</code>
-      <div class="copy-hint">Tap the URL above to copy it</div>
+      <h3>Enter the Downloader code</h3>
+      <p>Open Downloader and type this code into the address box, then press <strong>Go</strong>:</p>
+      <code class="bigcode" onclick="copyURL(this)">2809800</code>
+      <div class="copy-hint">The APK will start downloading automatically</div>
+      <div class="tip">🔗 Prefer a link? You can also type the full address:<br><span style="color:#fff;font-family:monospace;font-size:12px;word-break:break-all">pub-dfe4494897fd44f180ebedc0a3dc7786.r2.dev/app-release.apk</span></div>
     </div>
   </div>
 
@@ -123,6 +141,7 @@
     <div class="step-content">
       <h3>Install and open the app</h3>
       <p>Once downloaded, tap <strong>Install</strong> then <strong>Open</strong>. The SignagePanel Player will launch and show a QR code on screen.</p>
+      <div class="tip">👀 Want to see it in action first? On the pairing screen, press <strong>OK</strong> on your remote to preview a demo playlist. Press <strong>OK</strong> again to exit.</div>
     </div>
   </div>
 
@@ -151,7 +170,7 @@
 <div class="cta-section">
   <div class="cta-box">
     <h3>Don't have an account yet?</h3>
-    <p>Sign up and start managing your screens for £50/screen/year.</p>
+    <p>Sign up and start managing your screens for £70/screen/year.</p>
     <a href="https://app.signagepanel.app" class="cta-btn">Create Account →</a>
   </div>
 </div>
@@ -165,7 +184,7 @@ function copyURL(el) {
   navigator.clipboard.writeText(el.textContent.trim()).then(() => {
     el.style.borderColor = '#27ae60';
     el.style.color = '#27ae60';
-    setTimeout(() => { el.style.borderColor = '#333'; el.style.color = '#fff'; }, 1500);
+    setTimeout(() => { el.style.borderColor = '#333'; el.style.color = el.classList.contains('bigcode') ? '#ff6b00' : '#fff'; }, 1500);
   });
 }
 </script>
